@@ -1,0 +1,4 @@
+# Configuration for spam email detection
+model_path: models/email_classifier_model.pkl
+vectorizer_path: models/tfidf_vectorizer.pk
+dataset_path: data/sample_dataset.csv

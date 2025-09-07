@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  email-classifier:
+    build: .
+    container_name: email_classifier_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models   # Persist model files
+      - ./data:/app/data       # Optional: persist datasets
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
+
+
